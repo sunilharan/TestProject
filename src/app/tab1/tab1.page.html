@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="theme-gray">
+    <ion-title class="header-title">
+      YOUR REPAIR(S) ARE COMPLETE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-wrapper ion-text-center">
+    <ion-avatar>
+      <img src="assets/img/profile.jpg">      
+    </ion-avatar>
+    <p class="profile-notes">
+        Joe has finished working on your vehicle.
+    </p>
+    <h3 class="rate-title">
+      RATE THIS WORK
+    </h3>
+    <ionic-rating-component #rating 
+      activeIcon = "star"
+      defaultIcon = "star"
+      activeColor = "#da6a2c"
+      defaultColor = "#707070"
+      readonly = "false"
+      fontSize = "32px"
+      (ratingChanged)="onRatingChange($event)"
+    ></ionic-rating-component>
+    <ion-item class="comment ion-margin-top" lines="none">
+      <ion-textarea rows="4" placeholder="Write a review on your experience."></ion-textarea>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-button class="ion-no-margin" color="theme-gray" expand="full">
+    DONE/SUBMIT
+    <ion-icon slot="end" name="caret-forward"></ion-icon>
+  </ion-button>
+</ion-footer>
